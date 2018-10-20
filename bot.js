@@ -25,7 +25,9 @@ client.on('ready',  () => {
 client.on('ready', async () => {
     console.log('I am ready!');
 
-
+client.on('guildMemberAdd', (member) => {
+member.addRole(member.guild.roles.find('name', '.Smash'));
+});
 
 
 
